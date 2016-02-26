@@ -26,14 +26,19 @@ module.exports = {
       {
         test: /\.(less(\?.*)?)$/,
         loader: ExtractTextPlugin.extract('css!postcss!less')
-      }
+      },
+      { test: /\.(png|jpg)$/, loader: 'url?limit=25000' },
+      { test: /\.(woff|woff2)$/,  loader: 'url-loader?limit=10000&mimetype=application/font-woff' },
+      { test: /\.ttf$/,    loader: 'file-loader' },
+      { test: /\.eot$/,    loader: 'file-loader' },
+      { test: /\.svg$/,    loader: 'file-loader' }
     ]
   },
   postcss: function() {
     return[
-      require('postcss-import')(),
       require('postcss-bem')(),
       require('postcss-nested')(),
+      require('postcss-import')(),
       require('postcss-clearfix')(),
       require('css-mqpacker')(),
       require('postcss-font-magician')(),

@@ -1,0 +1,181 @@
+*{
+  box-sizing: border-box;
+}
+
+.no-margin{
+  margin-bottom: 0;
+}
+
+.twox-margin{
+  margin-bottom:1rem;
+}
+
+.threex-margin{
+  margin-bottom: 1.5rem;
+}
+
+.fivex-margin{
+  margin-bottom: 2.5rem;
+}
+
+.sevenx-margin{
+  margin-bottom: 3.5rem;
+}
+
+.img-resp{
+  width:100%;
+}
+
+@component-namespace oPort{
+
+  @component Sidebar{
+
+    @descendent repCard{
+      padding:40px;
+    }
+
+    @descendent quoteDetails{
+      padding: 20px 40px;
+    }
+
+    @descendent footer{
+      padding: 40px 45px 0 45px;
+    }
+
+
+
+    @descendent footerNav{
+      padding-top:.25rem;
+
+      ul{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li{
+          display: inline-block;
+
+          a{
+            font-size: .89rem;
+            padding:0 8px;
+          }
+
+          &::after{
+            content: "|"
+          }
+
+          &:first-child{
+            a{
+              margin-left: 0px;
+            }
+          }
+
+          &:last-child{
+            a{
+              margin-right: 0px;
+            }
+
+            &::after{
+              content: ""
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @component Nav{
+
+    @descendent navList{
+      margin:0;
+      padding:0;
+      list-style: none;
+
+      li{
+
+        a{
+          padding: 40px 0;
+          display: block;
+          text-align: center;
+          text-transform: uppercase;
+          font-size: 1.14rem;
+          color: @links;
+
+          svg{
+            display: block;
+            margin: 0 auto 20px auto;
+
+            path{
+              fill: @links;
+            }
+          }
+
+          &:hover{
+            color:@white;
+            background: @lightBlue;
+
+            svg{
+
+              path{
+                fill: @white;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @component Quote{
+    padding: 40px 0;
+    width: 1135px;
+    margin:auto;
+
+    @descendent header{
+      text-align: center;
+
+      h1{
+        line-height: 4rem;
+      }
+
+      p{
+        padding-left: 225px;
+      }
+    }
+
+    @descendent quoteMeta{
+      position: absolute;
+      top: 30px;
+      right: 30px;
+
+      .table-spacer{
+        width: 20px;
+      }
+    }
+
+    @descendent package{
+
+      .packageSelect{
+        background: @purple;
+        padding: 15px 30px;
+
+        input[type=radio]{
+          float:left;
+          margin: .8rem 20px .8rem 0;
+          border: none;
+        }
+      }
+
+      .packageDetails{
+        border: 1px solid @purple;
+        border-top:none;
+        padding:20px;
+      }
+
+      @when selected{
+        background: @skyBlue;
+      }
+    }
+  }
+
+}

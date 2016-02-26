@@ -1,0 +1,44 @@
+body{
+  background: @lightBlue;
+}
+
+@component-namespace oPort{
+
+  @component Sidebar{
+    background: @medBlue;
+    border-right: 3px solid darken(@medBlue, 10%);
+
+    @descendent repCard{
+      border-bottom:3px solid darken(@medBlue, 10%);
+    }
+
+    @descendent quoteDetails{
+      border-bottom: 3px solid darken(@medBlue, 10%);
+    }
+
+    @descendent icon{
+
+      path{
+        fill: @white;
+      }
+    }
+  }
+
+  @component Nav{
+    background: @medBlue;
+  }
+
+  @component btn{
+    border-radius: 10px;
+    font-size: 1.33rem;
+    padding: .85rem 1.5rem;
+    border:none;
+    color:@white;
+    font-weight:100;
+
+    @modifier mag{
+      background: @magenta;
+    }
+  }
+
+}
