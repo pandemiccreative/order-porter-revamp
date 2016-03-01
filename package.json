@@ -39,6 +39,7 @@
     "postcss-bem": "^0.4.1",
     "postcss-clearfix": "^0.2.1",
     "postcss-font-magician": "^1.4.0",
+    "postcss-for": "^2.0.1",
     "postcss-import": "^8.0.2",
     "postcss-loader": "^0.8.1",
     "postcss-nested": "^1.0.0",

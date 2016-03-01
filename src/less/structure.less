@@ -169,11 +169,83 @@
       .packageDetails{
         border: 1px solid @purple;
         border-top:none;
-        padding:20px;
+        padding:30px;
       }
 
       @when selected{
         background: @skyBlue;
+      }
+    }
+
+    @descendent addOnsHeader{
+      padding-top: 2rem;
+      text-align: center;
+    }
+
+    @descendent addOnsHeaderBtn{
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+
+    @descendent addOnsTable{
+
+      table{
+        table-layout: fixed;
+
+        thead{
+          text-align: left;
+          background: lighten(@lightBlue, 15%);
+
+          th{
+            font-weight: normal;
+            line-height: 2rem;
+
+            &:first-child{
+              padding-left:1rem;
+            }
+
+            &:last-child{
+              padding-right: 1rem;
+            }
+          }
+        }
+
+        tr{
+
+          td{
+
+            p{
+              line-height: 2rem;
+            }
+
+            &:first-child{
+              padding-left:1rem;
+            }
+
+            &:last-child{
+              padding-right: 1rem;
+            }
+          }
+
+          &:nth-child(even){
+            background: lighten(@lightBlue, 15%);
+          }
+        }
+      }
+    }
+
+    @descendent FormNav{
+
+      .navBack{
+
+        a{
+          font-size: 1.55rem;
+        }
+      }
+
+      .navForward{
+        text-align: right;
       }
     }
   }
