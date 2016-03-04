@@ -1,8 +1,42 @@
 .op_repCard{
-  padding:40px 35px 30px 40px;
+  padding:30px;
   border-bottom:3px solid darken(@bg_Blue_dark, 10%);
 
   &--photo{
     display:block;
+  }
+}
+
+@media (max-width: 500px){
+  .op_repCard{
+    width:50%;
+    font-size: 1.4rem;
+    line-height: 2.1rem;
+    border-bottom:none;
+    border-left: 3px solid darken(@bg_Blue_dark, 10%);
+
+    p{
+      line-height: 1.8rem;
+    }
+
+    &--photo{
+      display: none;
+    }
+
+    &--meta.col-sm-12{
+      padding: 0;
+    }
+
+    &--prepped{
+      font-size: 2.2rem;
+    }
+
+    &--repName{
+      font-size: 1.6rem;
+    }
+
+    &--company{
+      font-size: 1.8rem;
+    }
   }
 }

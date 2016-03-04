@@ -4,89 +4,140 @@
   <meta charset="UTF-8">
   <title>Order Porter Revamp</title>
   <link rel="stylesheet" href="css/styles.css">
-  <!-- <script src="//use.typekit.net/hhi1xzs.js"></script> -->
+  <script src="//use.typekit.net/hhi1xzs.js"></script>
   <script>try{Typekit.load();}catch(e){}</script>
 </head>
 <body>
-  <div id="op_l-sidebar" class="col-sm-4">
+  <div id="op_l-sidebar" class="col-lg-4 col-sm-12">
     <div class="row l-vCenter">
-      <aside class="col-sm-9 op_sidebar">
-        <div class="row l-vTop">
-          <section class="u-cf op_repCard">
-            <div class="col-sm-12">
-              <div class="row u-cf">
-                <figure class="col-sm-4 op_repCard--figure">
-                  <div class="row">
-                    <img class="l-imgResp op_repCard--photo" src="img/rep.jpg" alt="">
-                  </div>
-                </figure>
-                <section class="col-sm-8 op_repCard--meta">
-                  <h5 class="t-margin-2 op_repCard--prepped">Prepared By:</h5>
-                  <h6 class="t-margin-1 t-green op_repCard--repName">Calvin Johnson</h6>
-                  <p class="t-tight op_repCard--phone">813-868-1045</p>
-                  <p class="t-margin-2 op_repCard--email">cjohnson@connectwise.com</p>
-                  <h6 class="t-margin-1 t-green op_repCard--company">ConnectWise</h6>
-                  <p class="op_repCard--address">4110 George Road, Suite 200<br />
-                  Tampa, FL 33634</p>
-                </section>
-              </div>
-            </div>
-          </section>
-        </div>
-        <div class="row">
-          <section class="op_qDetailCard">
+      <aside class="col-lg-12 col-sm-12 op_sidebar">
+        <div class="row u-cf">
+          <div class="col-sm-12 op_mobileNav">
             <div class="row u-cf">
-              <div class="col-sm-12">
-                <h5 class="t-margin-2">Prepared For:</h5>
-                <h6 class="t-margin-1 t-green">John Doe</h6>
-                <h5 class="t-margin-2 t-green">A Sample Company</h5>
-                <p class="t-margin-9">1234 A Fictional Road<br />
-                Suite 2222<br />
-                Someplace, US 12345</p>
-                <h4 class="t-margin-1">View Your Quote</h4>
-                <p class="t-margin-4">Click the button below to download a details PDF of your quote.</p>
-                <button class="t-margin-10 op_btn--mag">Download Your Quote</button>
-                <h4 class="t-margin-4">Payment Details</h4>
-                <ul>
-                  <li class="op_qDetailCard--tableItem u-cf">
-                    <dl>
-                      <dt class="l-left">Setup Fees</dt>
-                      <dd class="l-left">$0.00</dd>
-                    </dl>
-                  </li>
-                  <li class="op_qDetailCard--tableItem u-cf">
-                    <dl>
-                      <dt class="l-left">Monthly Fees</dt>
-                      <dd class="l-left">$276.00</dd>
-                    </dl>
-                  </li>
-                  <li class="op_qDetailCard--tableItem u-cf">
-                    <dl>
-                      <dt class="l-left">Down Payment</dt>
-                      <dd class="l-left">$0</dd>
-                    </dl>
-                  </li>
-                  <li class="op_qDetailCard--tableItem u-cf">
-                    <dl>
-                      <dt class="l-left">Contract Start Date</dt>
-                      <dd class="l-left">4/1/16</dd>
-                    </dl>
-                  </li>
-                  <li class="op_qDetailCard--tableItem u-cf">
-                    <dl>
-                      <dt class="l-left">Contract End Date</dt>
-                      <dd class="l-left">4/1/19</dd>
-                    </dl>
-                  </li>
-                </ul>
-              </div>
+              <ul class="op_mobileNav--list">
+                <li class="op_mobileNav--item">
+                  <a class="op_mobileNav--link" href="#">
+                    <span>
+                      <figure class="op_mobileNav--icon">
+                        <svg class="op_icon--blue t-margin-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 54 62"><path d="M37.21,5.89c-1.88-1.15-5.15-1.54-7.31-1.54s-5.43.39-7.31,1.54c-5,3.08-4.72,9.91-3.49,15,1.11,4.61,4.05,8.66,8.78,9.45,0,0,1.51.17,2,.17s2-.17,2-0.17c4.73-.8,7.67-4.84,8.78-9.45C41.93,15.8,42.25,9,37.21,5.89Z" transform="translate(-3.16 -4.35)"/><path d="M29.9,34.07s-31.75,0-26.06,28.06c0,0,5.94,4.16,26.06,4.16S56,62.13,56,62.13C61.65,34.07,29.9,34.07,29.9,34.07Z" transform="translate(-3.16 -4.35)"/></svg>
+                      </figure>
+                      Get Started
+                    </span>
+                  </a>
+                </li>
+                <li class="op_mobileNav--item">
+                  <a class="op_mobileNav--link" href="#">
+                    <span>
+                      <figure class="op_mobileNav--icon">
+                        <svg class="op_icon--blue t-margin-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 65"><path d="M53,14.33L43.25,4.66A3.22,3.22,0,0,0,41,3.72H9.11A3.23,3.23,0,0,0,5.88,6.95V64.09a3.23,3.23,0,0,0,3.23,3.22H50.69a3.23,3.23,0,0,0,3.23-3.22V16.62A3.22,3.22,0,0,0,53,14.33Zm-5.5,46.53H12.33V10.17H39v6.45a2,2,0,0,0,2,2h6.49V60.86ZM17.35,45.7h25.1v-4H17.35v4Zm0,8.16h25.1v-4H17.35v4Zm0-16.33h25.1v-4H17.35v4Zm0-8.16h25.1v-4H17.35v4Z" transform="translate(-5.88 -3.72)"/></svg>
+                      </figure>
+                      Quote Summary
+                    </span>
+                  </a>
+                </li>
+                <li class="op_mobileNav--item">
+                  <a class="op_mobileNav--link" href="#">
+                    <span>
+                      <figure class="op_mobileNav--icon">
+                        <svg class="op_icon--blue" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 58.78 67.36"><path d="M15.73,35.31h-3.6V10.62H7.2V35.31H3.6a2.67,2.67,0,0,0-2.47,2.83V53.79A2.67,2.67,0,0,0,3.6,56.62H7.2v4.22h4.94V56.62h3.6a2.67,2.67,0,0,0,2.47-2.83V38.14A2.67,2.67,0,0,0,15.73,35.31ZM13.26,51H6.07V41h7.19V51Zm43.2-36.12h-3.6V10.62H47.93v4.22h-3.6a2.67,2.67,0,0,0-2.47,2.84V33.32a2.67,2.67,0,0,0,2.47,2.83h3.6V60.84h4.94V36.15h3.6a2.67,2.67,0,0,0,2.47-2.83V17.67A2.67,2.67,0,0,0,56.46,14.84ZM54,30.48H46.8v-10H54v10Zm-17.9-6.57H32.5V10.62H27.56V23.91H24a2.67,2.67,0,0,0-2.47,2.83V42.39A2.67,2.67,0,0,0,24,45.23h3.59V60.84H32.5V45.23h3.6a2.67,2.67,0,0,0,2.47-2.83V26.75A2.67,2.67,0,0,0,36.09,23.91ZM33.63,39.56H26.43v-10h7.19v10Z" transform="translate(-0.51 -2.4)" style="fill:#078ea8"/></svg>
+                      </figure>
+                      Options
+                    </span>
+                  </a>
+                </li>
+                <li class="op_mobileNav--item">
+                  <a class="op_mobileNav--link" href="#">
+                    <span>
+                      <figure class="op_mobileNav--icon">
+                        <svg class="op_icon--blue t-margin-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 58.78 67.36"><path d="M59.29,43.94c-0.06-1.64-1.21-4.14-2.73-4.45,2.2-1.32,1.93-6,.62-7.93-1.57-2.33-4.8-2.69-7.36-2.75-1.28,0-2.56,0-3.84.06-0.78,0-11.09,0-11.09.07,0.85-5.77,3.48-11.57,3.52-17.41A17.56,17.56,0,0,0,38,7.64c-0.43-1.94-1.17-4.56-3.37-5.1-4.76-1.17-5.32,5.27-6.44,8.25-1,2.66-2,5.38-3.11,8a41.41,41.41,0,0,1-7.58,11.88,24.82,24.82,0,0,1-7.77,5.64,6.77,6.77,0,0,1-2.24.43c-1.54,0-6.92-.2-6.92-0.2L0.51,68.71h10c5.11,0.24,22.38,1,28.79,1.05,3.43,0,10.94-.34,13.47-2.65,2.26-2.06,1.86-4,1.17-6.49,2.44-1.51,3.11-2.68,3.35-5.43,0.22-2.5-.21-3.64-1.07-4.73C59,49.4,59.34,45.68,59.29,43.94Z" transform="translate(-0.51 -2.4)"/></svg>
+                      </figure>
+                      Approval And Billing
+                    </span>
+                  </a>
+                </li>
+                <li class="op_mobileNav--item">
+                  <a class="op_sidebar--toggle op_mobileNav--link" href="#">
+                    <span>
+                      <figure class="op_mobileNav--icon">
+                        <svg class="op_icon--white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34.67 30.44"><rect width="34.67" height="6.47" style="fill:#fff"/><rect y="11.99" width="34.67" height="6.47" style="fill:#fff"/><rect y="23.97" width="34.67" height="6.47" style="fill:#fff"/></svg>
+                      </figure>
+                    </span>
+                  </a>
+                </li>
+              </ul>
             </div>
-          </section>
+          </div>
+        </div>
+        <div class="row u-cf op_infoCards">
+          <div class="col-lg-12 op_repCard l-right">
+            <figure class="col-lg-4 op_repCard--figure">
+              <img class="l-imgResp op_repCard--photo" src="img/rep.jpg" alt="">
+            </figure>
+            <section class="col-lg-8 col-sm-12 op_repCard--meta">
+              <h5 class="t-margin-1 op_repCard--prepped">Prepared By:</h5>
+              <h6 class="t-margin-1 t-green op_repCard--repName">Calvin Johnson</h6>
+              <p class="t-tight op_repCard--phone">813-868-1045</p>
+              <p class="t-margin-1 op_repCard--email">cjohnson@connectwise.com</p>
+              <h6 class="t-margin-0 t-green op_repCard--company">ConnectWise</h6>
+              <p class="op_repCard--address t-tight">4110 George Road, Suite 200<br />
+              Tampa, FL 33634</p>
+            </section>
+          </div>
+          <div class="col-lg-12 op_prospectCard l-left">
+            <h5 class="t-margin-2 op_prospectCard--prepped">Prepared For:</h5>
+            <h6 class="t-margin-1 op_prospectCard--name t-green">John Doe</h6>
+            <h5 class="t-margin-2 op_prospectCard--company t-green">A Sample Company</h5>
+            <p class="t-tight">1234 A Fictional Road<br />
+            Suite 2222<br />
+            Someplace, US 12345</p>
+          </div>
+        </div>
+        <div class="row u-cf">
+          <div class="col-lg-12 op_detailCard l-left">
+            <div class="col-lg-12">
+              <h4 class="t-margin-1">View Your Quote</h4>
+              <p class="t-margin-4 t-tight">Click the button below to download a details PDF of your quote.</p>
+              <button class="t-margin-10 op_btn--mag">Download Your Quote</button>
+              <h4 class="t-margin-4">Payment Details</h4>
+              <ul>
+                <li class="op_detailCard--tableItem u-cf">
+                  <dl>
+                    <dt class="l-left">Setup Fees</dt>
+                    <dd class="l-left">$0.00</dd>
+                  </dl>
+                </li>
+                <li class="op_detailCard--tableItem u-cf">
+                  <dl>
+                    <dt class="l-left">Monthly Fees</dt>
+                    <dd class="l-left">$276.00</dd>
+                  </dl>
+                </li>
+                <li class="op_detailCard--tableItem u-cf">
+                  <dl>
+                    <dt class="l-left">Down Payment</dt>
+                    <dd class="l-left">$0</dd>
+                  </dl>
+                </li>
+                <li class="op_detailCard--tableItem u-cf">
+                  <dl>
+                    <dt class="l-left">Contract Start Date</dt>
+                    <dd class="l-left">4/1/16</dd>
+                  </dl>
+                </li>
+                <li class="op_detailCard--tableItem u-cf">
+                  <dl>
+                    <dt class="l-left">Contract End Date</dt>
+                    <dd class="l-left">4/1/19</dd>
+                  </dl>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
         <div class="row l-vBottom">
           <footer class="op_sideFooter">
             <div class="row u-cf">
-              <figure class="col-sm-3">
+              <figure class="col-lg-3 op_sideFooter--icon">
                 <a href="#">
                   <svg class="op_icon--white" viewBox="0 0 63 46" preserveAspectRatio="xMidYMid meet">
                     <g>
@@ -106,7 +157,7 @@
                   </svg>
                 </a>
               </figure>
-              <figure class="col-sm-3">
+              <figure class="col-lg-3 op_sideFooter--icon">
                 <a href="#">
                   <svg class="op_icon--white" viewBox="0 0 63 46" preserveAspectRatio="xMidYMid meet">
                     <g>
@@ -134,7 +185,7 @@
                   </svg>
                 </a>
               </figure>
-              <figure class="col-sm-3">
+              <figure class="col-lg-3 op_sideFooter--icon">
                 <a href="#">
                   <svg class="op_icon--white" viewBox="0 0 63 46" preserveAspectRatio="xMidYMid meet">
                     <g>
@@ -150,7 +201,7 @@
                   </svg>
                 </a>
               </figure>
-              <figure class="col-sm-3">
+              <figure class="col-lg-3 op_sideFooter--icon">
                 <a href="#">
                   <svg class="op_icon--white" viewBox="0 0 63 46" preserveAspectRatio="xMidYMid meet">
                     <g>
@@ -166,222 +217,688 @@
           </footer>
         </div>
       </aside>
-      <nav class="col-sm-3">
-        <div class="op_mainNav">
-          <div class="row">
-            <ul class="op_mainNav--list">
-              <li class="op_mainNav--navItem">
-                <a class="op_mainNav--navLink" href="#">
+      <nav class="col-lg-3 op_mainNav">
+        <div class="row">
+          <ul class="op_mainNav--list">
+            <li class="op_mainNav--navItem">
+              <a class="op_mainNav--navLink" href="#">
+                <svg class="op_icon--blue t-margin-3" width="68" viewBox="0 0 67 78" preserveAspectRatio="xMidYMid meet">
+                  <g>
+                  	<path d="M42.6,2.9C40.3,1.5,36.2,1,33.5,1c-2.7,0-6.8,0.5-9.1,1.9c-6.3,3.8-5.9,12.3-4.3,18.7
+                  		c1.4,5.7,5.1,10.8,10.9,11.8c0,0,1.9,0.2,2.5,0.2c0.6,0,2.5-0.2,2.5-0.2c5.9-1,9.6-6,10.9-11.8C48.5,15.3,48.9,6.8,42.6,2.9z"/>
+                  	<path d="M33.5,38c0,0-39.6,0-32.5,35c0,0,7.4,5.2,32.5,5.2C58.4,78.2,66,73,66,73C73.1,38,33.5,38,33.5,38z"/>
+                  </g>
+                </svg>
+                Get Started
+              </a>
+            </li>
+            <li class="op_mainNav--navItem">
+              <a class="op_mainNav--navLink" href="#">
+                <svg class="op_icon--blue t-margin-3" width="68" viewBox="0 0 67 78" preserveAspectRatio="xMidYMid meet">
+                  <path d="M61,13.7L49.3,2.1c-0.7-0.7-1.7-1.1-2.7-1.1H8.4c-2.1,0-3.9,1.7-3.9,3.9v68.6c0,2.1,1.7,3.9,3.9,3.9h49.9c2.1,0,3.9-1.7,3.9-3.9v-57C62.2,15.4,61.7,14.4,61,13.7zM54.4,69.5H12.2V8.7h32v7.7c0,1.3,1.1,2.4,2.4,2.4h7.8V69.5z M18.3,51.3h30.1v-4.8H18.3V51.3z M18.3,61.1h30.1v-4.8H18.3V61.1z M18.3,41.5h30.1v-4.8H18.3V41.5z M18.3,31.7h30.1v-4.8H18.3V31.7z"/>
+                </svg>
+                Quote Summary
+              </a>
+            </li>
+            <li class="op_mainNav--navItem">
+              <a class="op_mainNav--navLink" href="#">
+                <svg class="op_icon--blue t-margin-3" width="68" viewBox="0 0 67 78" preserveAspectRatio="xMidYMid meet">
+                  <path d="M16.9,39.4h-4V11.8H7.4v27.7h-4c-1.5,0-2.8,1.4-2.8,3.2v17.6c0,1.8,1.2,3.2,2.8,3.2h4v4.7h5.5v-4.7h4c1.5,0,2.8-1.4,2.8-3.2V42.6C19.7,40.9,18.5,39.4,16.9,39.4zM14.2,57H6.1V45.8h8.1V57zM62.6,16.5h-4v-4.7H53v4.7h-4c-1.5,0-2.8,1.4-2.8,3.2v17.6c0,1.8,1.2,3.2,2.8,3.2h4v27.7h5.5V40.4h4c1.5,0,2.8-1.4,2.8-3.2V19.7C65.4,17.9,64.1,16.5,62.6,16.5zM59.8,34h-8.1V22.8h8.1V34zM39.8,26.7h-4V11.8h-5.5v14.9h-4c-1.5,0-2.8,1.4-2.8,3.2v17.6c0,1.8,1.2,3.2,2.8,3.2h4v17.5h5.5V50.6h4c1.5,0,2.8-1.4,2.8-3.2V29.8C42.5,28.1,41.3,26.7,39.8,26.7z M37,44.2h-8.1V33H37V44.2z"/>
+                </svg>
+                Options
+              </a>
+            </li>
+            <li class="op_mainNav--navItem">
+              <a class="op_mainNav--navLink" href="#">
                   <svg class="op_icon--blue t-margin-3" width="68" viewBox="0 0 67 78" preserveAspectRatio="xMidYMid meet">
-                    <g>
-                    	<path d="M42.6,2.9C40.3,1.5,36.2,1,33.5,1c-2.7,0-6.8,0.5-9.1,1.9c-6.3,3.8-5.9,12.3-4.3,18.7
-                    		c1.4,5.7,5.1,10.8,10.9,11.8c0,0,1.9,0.2,2.5,0.2c0.6,0,2.5-0.2,2.5-0.2c5.9-1,9.6-6,10.9-11.8C48.5,15.3,48.9,6.8,42.6,2.9z"/>
-                    	<path d="M33.5,38c0,0-39.6,0-32.5,35c0,0,7.4,5.2,32.5,5.2C58.4,78.2,66,73,66,73C73.1,38,33.5,38,33.5,38z"/>
-                    </g>
+                    <path d="M65.3,49c-0.1-1.8-1.3-4.5-3-4.9c2.4-1.4,2.1-6.5,0.7-8.6c-1.7-2.5-5.2-2.9-8-3c-1.4,0-2.8,0-4.2,0.1c-0.9,0-12.1,0.1-12.1,0.1c0.9-6.3,3.8-12.6,3.8-19c0-1.4-0.1-2.9-0.4-4.2c-0.5-2.1-1.3-5-3.7-5.6c-5.2-1.3-5.8,5.7-7,9c-1.1,2.9-2.2,5.9-3.4,8.8c-1.9,4.8-4.8,9.1-8.3,12.9c-2.2,2.5-5.5,4.8-8.5,6.1c-0.7,0.3-1.5,0.4-2.4,0.5c-1.7,0-7.5-0.2-7.5-0.2L1.3,76h10.9c5.6,0.3,24.4,1.1,31.4,1.1c3.7,0,11.9-0.4,14.7-2.9c2.5-2.2,2-4.3,1.3-7.1c2.7-1.6,3.4-2.9,3.7-5.9c0.2-2.7-0.2-4-1.2-5.2C65,54.9,65.4,50.9,65.3,49z"/>
                   </svg>
-                  Get Started
-                </a>
-              </li>
-              <li class="op_mainNav--navItem">
-                <a class="op_mainNav--navLink" href="#">
-                  <svg class="op_icon--blue t-margin-3" width="68" viewBox="0 0 67 78" preserveAspectRatio="xMidYMid meet">
-                    <path d="M61,13.7L49.3,2.1c-0.7-0.7-1.7-1.1-2.7-1.1H8.4c-2.1,0-3.9,1.7-3.9,3.9v68.6c0,2.1,1.7,3.9,3.9,3.9h49.9c2.1,0,3.9-1.7,3.9-3.9v-57C62.2,15.4,61.7,14.4,61,13.7zM54.4,69.5H12.2V8.7h32v7.7c0,1.3,1.1,2.4,2.4,2.4h7.8V69.5z M18.3,51.3h30.1v-4.8H18.3V51.3z M18.3,61.1h30.1v-4.8H18.3V61.1z M18.3,41.5h30.1v-4.8H18.3V41.5z M18.3,31.7h30.1v-4.8H18.3V31.7z"/>
-                  </svg>
-                  Quote Summary
-                </a>
-              </li>
-              <li class="op_mainNav--navItem">
-                <a class="op_mainNav--navLink" href="#">
-                  <svg class="op_icon--blue t-margin-3" width="68" viewBox="0 0 67 78" preserveAspectRatio="xMidYMid meet">
-                    <path d="M16.9,39.4h-4V11.8H7.4v27.7h-4c-1.5,0-2.8,1.4-2.8,3.2v17.6c0,1.8,1.2,3.2,2.8,3.2h4v4.7h5.5v-4.7h4c1.5,0,2.8-1.4,2.8-3.2V42.6C19.7,40.9,18.5,39.4,16.9,39.4zM14.2,57H6.1V45.8h8.1V57zM62.6,16.5h-4v-4.7H53v4.7h-4c-1.5,0-2.8,1.4-2.8,3.2v17.6c0,1.8,1.2,3.2,2.8,3.2h4v27.7h5.5V40.4h4c1.5,0,2.8-1.4,2.8-3.2V19.7C65.4,17.9,64.1,16.5,62.6,16.5zM59.8,34h-8.1V22.8h8.1V34zM39.8,26.7h-4V11.8h-5.5v14.9h-4c-1.5,0-2.8,1.4-2.8,3.2v17.6c0,1.8,1.2,3.2,2.8,3.2h4v17.5h5.5V50.6h4c1.5,0,2.8-1.4,2.8-3.2V29.8C42.5,28.1,41.3,26.7,39.8,26.7z M37,44.2h-8.1V33H37V44.2z"/>
-                  </svg>
-                  Options
-                </a>
-              </li>
-              <li class="op_mainNav--navItem">
-                <a class="op_mainNav--navLink" href="#">
-                    <svg class="op_icon--blue t-margin-3" width="68" viewBox="0 0 67 78" preserveAspectRatio="xMidYMid meet">
-                      <path d="M65.3,49c-0.1-1.8-1.3-4.5-3-4.9c2.4-1.4,2.1-6.5,0.7-8.6c-1.7-2.5-5.2-2.9-8-3c-1.4,0-2.8,0-4.2,0.1c-0.9,0-12.1,0.1-12.1,0.1c0.9-6.3,3.8-12.6,3.8-19c0-1.4-0.1-2.9-0.4-4.2c-0.5-2.1-1.3-5-3.7-5.6c-5.2-1.3-5.8,5.7-7,9c-1.1,2.9-2.2,5.9-3.4,8.8c-1.9,4.8-4.8,9.1-8.3,12.9c-2.2,2.5-5.5,4.8-8.5,6.1c-0.7,0.3-1.5,0.4-2.4,0.5c-1.7,0-7.5-0.2-7.5-0.2L1.3,76h10.9c5.6,0.3,24.4,1.1,31.4,1.1c3.7,0,11.9-0.4,14.7-2.9c2.5-2.2,2-4.3,1.3-7.1c2.7-1.6,3.4-2.9,3.7-5.9c0.2-2.7-0.2-4-1.2-5.2C65,54.9,65.4,50.9,65.3,49z"/>
-                    </svg>
-                  Approval and Billing
-                </a>
-              </li>
-            </ul>
-          </div>
+                Approval and Billing
+              </a>
+            </li>
+          </ul>
         </div>
       </nav>
     </div>
   </div>
-    <div class="col-sm-8">
+    <div class="col-lg-8">
       <main id="op_l-main">
-        <div class="row">
-          <aside class="op_quoteMeta">
-            <table cellspacing="0" cellpadding="0" border="0">
-              <tbody>
-                <tr>
-                  <td><p class="t-margin-1">Quote Number:</p></td>
-                  <td class="l-spacer"></td>
-                  <td><p class="t-margin-1">115309</p></td>
-                </tr>
-                <tr>
-                  <td><p>Version Number:</p></td>
-                  <td class="l-spacer"></td>
-                  <td><p class="t-margin-1">1</p></td>
-                </tr>
-                <tr>
-                  <td><p class="t-margin-1">Prepare Date:</p></td>
-                  <td class="l-spacer"></td>
-                  <td><p class="t-margin-1">2/4/2016 5:57:24PM</p></td>
-                </tr>
-                <tr>
-                  <td><p class="t-margin-1">Expires:</p></td>
-                  <td class="l-spacer"></td>
-                  <td><p class="t-margin-1">2/29/2016 5:57:24PM</p></td>
-                </tr>
-              </tbody>
-            </table>
-          </aside>
-          <div class="row cf">
-            <header class="col-sm-12 l-center">
-              <h1>Order Quote</h1>
-              <p class="t-margin-11 op_mainHeader--powered">Powered by Quosal</p>
-              <h2 class="t-margin-5">Select Your Package</h2>
-            </header>
-          </div>
           <div class="row u-cf">
-            <div class="col-sm-6 t-margin-11">
-              <div class="row u-cf">
-                <div class="col-sm-11">
-                  <div class="op_qPackage is-selected">
-                    <div class="row u-cf">
-                      <div class="col-sm-12">
-                        <div class="op_qPackage--header">
-                          <h3 class="no-margin">Select This Option</h3>
-                        </div>
-                      </div>
-                      <div class="col-sm-12">
-                        <div class="op_qPackage--details u-cf">
-                          <h3 class="t-margin-5">ConnectWise Cloud</h3>
-                          <table cellspacing="0" cellpadding="0" border="0" width="100%">
-                            <tbody>
-                              <tr>
-                                <td><p>Setup Fees:</p></td>
-                                <td width="35%"></td>
-                                <td><p>$0.00</p></td>
-                              </tr>
-                              <tr>
-                                <td><p>Monthly Fees:</p></td>
-                                <td width="35%"></td>
-                                <td><p>$276.00</p></td>
-                              </tr>
-                              <tr>
-                                <td><p>Down Payment:</p></td>
-                                <td width="35%"></td>
-                                <td><p>$0.00</p></td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6 t-margin-11">
-              <div class="row u-cf">
-                <div class="col-sm-11 col-sm-offset-1">
-                  <div class="op_qPackage">
-                    <div class="row u-cf">
-                      <div class="col-sm-12">
-                        <div class="op_qPackage--header">
-                          <h3 class="no-margin">Select This Option</h3>
-                        </div>
-                      </div>
-                      <div class="col-sm-12">
-                        <div class="op_qPackage--details u-cf">
-                          <h3 class="t-margin-5">On Premise SaaS</h3>
-                          <table cellspacing="0" cellpadding="0" border="0" width="100%">
-                            <tbody>
-                              <tr>
-                                <td><p>Setup Fees:</p></td>
-                                <td width="35%"></td>
-                                <td><p>$0.00</p></td>
-                              </tr>
-                              <tr>
-                                <td><p>Monthly Fees:</p></td>
-                                <td width="35%"></td>
-                                <td><p>$376.00</p></td>
-                              </tr>
-                              <tr>
-                                <td><p>Down Payment:</p></td>
-                                <td width="35%"></td>
-                                <td><p>$0.00</p></td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="op_addOns">
-            <div class="row cf">
-              <div class="col-sm-12 l-center">
-                <h3 class="t-margin-4">Add-Ons</h3>
-                <button class="op_btn--grn op_addOns--updateBtn">Update Selected Options</button>
-              </div>
-            </div>
-            <div class="row u-cf">
-              <div class="col-sm-12 t-margin-4">
-                <table class="op_addOns--table" cellspacing="0" cellpadding="0" border="0" width="100%">
-                  <thead>
-                    <tr>
-                      <th colspan="2">Item Name</th>
-                      <th colspan="4">Description</th>
-                      <th colspan="1">Qty</th>
-                      <th colspan="1">Price</th>
-                      <th colspan="1">Ext. Price</th>
-                    </tr>
-                  </thead>
+            <div class="op_mainHeader t-margin-9">
+              <header class="col-lg-12 l-center">
+                <h1>Order Quote</h1>
+                <p class="op_mainHeader--powered">Powered by Quosal</p>
+              </header>
+              <aside class="op_quoteMeta">
+                <table class="no-bg" cellspacing="0" cellpadding="0" border="0">
                   <tbody>
-                    <tr class="op_addOns--tableRow">
-                      <td colspan="2"><p>PSA SaaS Plan SERV</p></td>
-                      <td colspan="4"><p>SaaS On-Premise Server License &amp; Support</p></td>
-                      <td colspan="1"><p>1</p></td>
-                      <td colspan="1"><p>$100.00</p></td>
-                      <td colspan="1"><p>$100.00</p></td>
+                    <tr>
+                      <td><p class="t-margin-1">Quote Number:</p></td>
+                      <td class="l-spacer"></td>
+                      <td><p class="t-margin-1">115309</p></td>
                     </tr>
-                    <tr class="op_addOns--tableRow">
-                      <td colspan="2"><p>PSA SaaS Plan SERV</p></td>
-                      <td colspan="4"><p>SaaS On-Premise Server License &amp; Support</p></td>
-                      <td colspan="1"><p>1</p></td>
-                      <td colspan="1"><p>$100.00</p></td>
-                      <td colspan="1"><p>$100.00</p></td>
+                    <tr>
+                      <td><p>Version Number:</p></td>
+                      <td class="l-spacer"></td>
+                      <td><p class="t-margin-1">1</p></td>
+                    </tr>
+                    <tr>
+                      <td><p class="t-margin-1">Prepare Date:</p></td>
+                      <td class="l-spacer"></td>
+                      <td><p class="t-margin-1">2/4/2016 5:57:24PM</p></td>
+                    </tr>
+                    <tr>
+                      <td><p class="t-margin-1">Expires:</p></td>
+                      <td class="l-spacer"></td>
+                      <td><p class="t-margin-1">2/29/2016 5:57:24PM</p></td>
                     </tr>
                   </tbody>
                 </table>
+              </aside>
+            </div>
+          </div>
+          <div class="row u-cf">
+          <div class="l-card l-card-1 op_introCard">
+            <div class="row u-cf">
+              <div class="col-lg-12 l-center t-margin-8 op_introCard--header">
+                <h2>Thanks For Your Interest</h2>
+              </div>
+            </div>
+            <div class="row t-margin-6 u-cf">
+              <div class="col-lg-8 op_introCard--video">
+                <div class="vidPlaceholder"></div>
+              </div>
+              <div class="col-lg-4 op_introCard--advert">
+                <h3 class="t-margin-4">Placeholder Header</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid corporis blanditiis ducimus, excepturi sint! Saepe consequatur optio id quaerat libero eveniet inventore earum pariatur nam! Deleniti illum, saepe ratione dolorem id. Velit vel dolore, molestias est minus deleniti vero perferendis commodi. Odit assumenda eius quisquam ea veniam quos nihil voluptas?</p>
               </div>
             </div>
             <div class="row u-cf">
-              <div class="op_addOns--subTotal">
-                <div class="col-sm-12">
-                  <h4 class="t-margin-6">Add-Ons SubTotal: $376.00</h4>
+              <div class="col-lg-12 op_formNav">
+                <div class="row cf">
+                  <div class="col-lg-12 u-cf">
+                    <button class="l-right op_btn--cta">Proceed to Your Quote</button>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="row">
-          <div class="col-sm-12 oPort-Quote-FormNav">
-              <div class="row cf">
-                <div class="col-sm-3 navBack">
-                  <a href="#">&lt;&lt; Go Back</a>
+          <div class="l-card l-card-2 op_quoteCard">
+            <div class="row u-cf">
+              <div class="col-lg-12 op_quoteCard--main">
+                <div class="op_quoteCard--table t-margin-6 u-cf">
+                  <h4 class="t-margin-2 l-center">Services</h4>
+                  <table class="t-margin-2" cellspacing="0" cellpadding="0" border="0" width="100%">
+                    <thead>
+                      <th colspan="2">
+                        <p>Item Name</p>
+                      </th>
+                      <th colspan="4">
+                        <p>Description</p>
+                      </th>
+                      <th colspan="1">
+                        <p>Qty</p>
+                      </th>
+                      <th colspan="1">
+                        <p>Price</p>
+                      </th>
+                      <th colspan="1">
+                        <p>Ext. Price</p>
+                      </th>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td colspan="2">
+                          <p>CWDWWO-INGLAPI</p>
+                        </td>
+                        <td colspan="4">
+                          <p>ConnectWise Basic GL API License</p>
+                        </td>
+                        <td colspan="1">
+                          <p>1</p>
+                        </td>
+                        <td colspan="1">
+                          <p>$595.00</p>
+                        </td>
+                        <td colspan="1">
+                          <p>$595.00</p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td colspan="2">
+                          <p>CWDWWO-INGLAPI</p>
+                        </td>
+                        <td colspan="4">
+                          <p>ConnectWise Basic GL API License</p>
+                        </td>
+                        <td colspan="1">
+                          <p>1</p>
+                        </td>
+                        <td colspan="1">
+                          <p>$595.00</p>
+                        </td>
+                        <td colspan="1">
+                          <p>$595.00</p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td colspan="2">
+                          <p>CWDWWO-INGLAPI</p>
+                        </td>
+                        <td colspan="4">
+                          <p>ConnectWise Basic GL API License</p>
+                        </td>
+                        <td colspan="1">
+                          <p>1</p>
+                        </td>
+                        <td colspan="1">
+                          <p>$595.00</p>
+                        </td>
+                        <td colspan="1">
+                          <p>$595.00</p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td colspan="2">
+                          <p>CWDWWO-INGLAPI</p>
+                        </td>
+                        <td colspan="4">
+                          <p>ConnectWise Basic GL API License</p>
+                        </td>
+                        <td colspan="1">
+                          <p>1</p>
+                        </td>
+                        <td colspan="1">
+                          <p>$595.00</p>
+                        </td>
+                        <td colspan="1">
+                          <p>$595.00</p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td colspan="2">
+                          <p>CWDWWO-INGLAPI</p>
+                        </td>
+                        <td colspan="4">
+                          <p>ConnectWise Basic GL API License</p>
+                        </td>
+                        <td colspan="1">
+                          <p>1</p>
+                        </td>
+                        <td colspan="1">
+                          <p>$595.00</p>
+                        </td>
+                        <td colspan="1">
+                          <p>$595.00</p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td colspan="2">
+                          <p>CWDWWO-INGLAPI</p>
+                        </td>
+                        <td colspan="4">
+                          <p>ConnectWise Basic GL API License</p>
+                        </td>
+                        <td colspan="1">
+                          <p>1</p>
+                        </td>
+                        <td colspan="1">
+                          <p>$595.00</p>
+                        </td>
+                        <td colspan="1">
+                          <p>$595.00</p>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <h5 class="l-right">Services Subtotal: $1,666.00</h5>
                 </div>
-                <div class="col-sm-5 col-sm-offset-4 navForward">
-                  <button class="oPort-btn oPort-btn--orng">Proceed to Billing Information</button>
+                <div class="t-margin-6 op_quoteCard--table u-cf">
+                  <h4 class="t-margin-2 l-center">Cloud</h4>
+                  <table class="t-margin-2" cellspacing="0" cellpadding="0" border="0" width="100%">
+                    <thead>
+                      <th colspan="2">
+                        <p>Item Name</p>
+                      </th>
+                      <th colspan="4">
+                        <p>Description</p>
+                      </th>
+                      <th colspan="1">
+                        <p>Qty</p>
+                      </th>
+                      <th colspan="1">
+                        <p>Price</p>
+                      </th>
+                      <th colspan="1">
+                        <p>Ext. Price</p>
+                      </th>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td colspan="2">
+                          <p>PSA-Cloud-Incl-Stand-User</p>
+                        </td>
+                        <td colspan="4">
+                          <p>PSA Cloud Named User License</p>
+                        </td>
+                        <td colspan="1">
+                          <p>4</p>
+                        </td>
+                        <td colspan="1">
+                          <p>$69.00</p>
+                        </td>
+                        <td colspan="1">
+                          <p>$276.00</p>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <h5 class="l-right">Cloud Subtotal: $276.00</h5>
+                </div>
+                <div class="t-margin-6 op_quoteCard--table u-cf">
+                  <h4 class="t-margin-2 l-center">On Premise SaaS</h4>
+                  <table class="t-margin-2" cellspacing="0" cellpadding="0" border="0" width="100%">
+                    <thead>
+                      <th colspan="2">
+                        <p>Item Name</p>
+                      </th>
+                      <th colspan="4">
+                        <p>Description</p>
+                      </th>
+                      <th colspan="1">
+                        <p>Qty</p>
+                      </th>
+                      <th colspan="1">
+                        <p>Price</p>
+                      </th>
+                      <th colspan="1">
+                        <p>Ext. Price</p>
+                      </th>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td colspan="2">
+                          <p>PSA SaaS Plan SERV</p>
+                        </td>
+                        <td colspan="4">
+                          <p>SaaS On-Premise Server License &amp; Support</p>
+                        </td>
+                        <td colspan="1">
+                          <p>1</p>
+                        </td>
+                        <td colspan="1">
+                          <p>$100.00</p>
+                        </td>
+                        <td colspan="1">
+                          <p>$100.00</p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td colspan="2">
+                          <p>PSA-SaaS-Incl-Stand-User</p>
+                        </td>
+                        <td colspan="4">
+                          <p>On Premise SaaS Named User License</p>
+                        </td>
+                        <td colspan="1">
+                          <p>4</p>
+                        </td>
+                        <td colspan="1">
+                          <p>$69.00</p>
+                        </td>
+                        <td colspan="1">
+                          <p>$276.00</p>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <h5 class="l-right">On Premise SaaS Subtotal: $376.00</h5>
+                </div>
+              </div>
+            </div>
+            <div class="row u-cf">
+              <div class="col-lg-12 op_formNav">
+                <div class="row cf">
+                  <div class="col-lg-3">
+                    <a class="op_formNav--back" href="#">&lt;&lt; Go Back</a>
+                  </div>
+                  <div class="col-lg-5 col-lg-offset-4 u-cf">
+                    <button class="l-right op_btn--cta">Proceed to Options</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="l-card l-card-3">
+            <div class="row u-cf">
+              <div class="col-lg-12 l-center">
+                <h2 class="t-margin-5">Select Your Package</h2>
+              </div>
+              <div class="col-lg-6 t-margin-9">
+                <div class="row u-cf">
+                  <div class="col-lg-11">
+                    <div class="op_qPackage is-selected">
+                      <div class="row u-cf">
+                        <div class="col-lg-12">
+                          <div class="op_qPackage--header">
+                            <h3 class="no-margin">Select This Option</h3>
+                          </div>
+                        </div>
+                        <div class="col-lg-12">
+                          <div class="op_qPackage--details u-cf">
+                            <h3 class="t-margin-5">ConnectWise Cloud</h3>
+                            <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                              <tbody>
+                                <tr>
+                                  <td><p>Setup Fees:</p></td>
+                                  <td width="35%"></td>
+                                  <td><p>$0.00</p></td>
+                                </tr>
+                                <tr>
+                                  <td><p>Monthly Fees:</p></td>
+                                  <td width="35%"></td>
+                                  <td><p>$276.00</p></td>
+                                </tr>
+                                <tr>
+                                  <td><p>Down Payment:</p></td>
+                                  <td width="35%"></td>
+                                  <td><p>$0.00</p></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 t-margin-9">
+                <div class="row u-cf">
+                  <div class="col-lg-11 col-lg-offset-1">
+                    <div class="op_qPackage">
+                      <div class="row u-cf">
+                        <div class="col-lg-12">
+                          <div class="op_qPackage--header">
+                            <h3 class="no-margin">Select This Option</h3>
+                          </div>
+                        </div>
+                        <div class="col-lg-12">
+                          <div class="op_qPackage--details u-cf">
+                            <h3 class="t-margin-5">On Premise SaaS</h3>
+                            <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                              <tbody>
+                                <tr>
+                                  <td><p>Setup Fees:</p></td>
+                                  <td width="35%"></td>
+                                  <td><p>$0.00</p></td>
+                                </tr>
+                                <tr>
+                                  <td><p>Monthly Fees:</p></td>
+                                  <td width="35%"></td>
+                                  <td><p>$376.00</p></td>
+                                </tr>
+                                <tr>
+                                  <td><p>Down Payment:</p></td>
+                                  <td width="35%"></td>
+                                  <td><p>$0.00</p></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="op_addOns">
+              <div class="row cf">
+                <div class="col-lg-12 l-center">
+                  <h3 class="t-margin-4">Add-Ons</h3>
+                  <button class="op_btn--grn op_addOns--updateBtn">Update Selected Options</button>
+                </div>
+              </div>
+              <div class="row u-cf">
+                <div class="col-lg-12 t-margin-4">
+                  <table class="op_addOns--table" cellspacing="0" cellpadding="0" border="0" width="100%">
+                    <thead>
+                      <tr>
+                        <th colspan="2">Item Name</th>
+                        <th colspan="4">Description</th>
+                        <th colspan="1">Qty</th>
+                        <th colspan="1">Price</th>
+                        <th colspan="1">Ext. Price</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="op_addOns--tableRow">
+                        <td colspan="2"><p>PSA SaaS Plan SERV</p></td>
+                        <td colspan="4"><p>SaaS On-Premise Server License &amp; Support</p></td>
+                        <td colspan="1"><p>1</p></td>
+                        <td colspan="1"><p>$100.00</p></td>
+                        <td colspan="1"><p>$100.00</p></td>
+                      </tr>
+                      <tr class="op_addOns--tableRow">
+                        <td colspan="2"><p>PSA SaaS Plan SERV</p></td>
+                        <td colspan="4"><p>SaaS On-Premise Server License &amp; Support</p></td>
+                        <td colspan="1"><p>1</p></td>
+                        <td colspan="1"><p>$100.00</p></td>
+                        <td colspan="1"><p>$100.00</p></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="row u-cf">
+                <div class="op_addOns--subTotal">
+                  <div class="col-lg-12">
+                    <h4 class="t-margin-6">Add-Ons SubTotal: $376.00</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row u-cf">
+              <div class="col-lg-12 op_formNav">
+                <div class="row cf">
+                  <div class="col-lg-3">
+                    <a class="op_formNav--back" href="#">&lt;&lt; Go Back</a>
+                  </div>
+                  <div class="col-lg-5 col-lg-offset-4 u-cf">
+                    <button class="l-right op_btn--cta">Proceed to Billing Information</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="l-card l-card-4 op_formCard">
+            <div class="row u-cf">
+              <div class="col-lg-12 l-center t-margin-8 op_formCard--header">
+                <h3>Your Information</h3>
+              </div>
+            </div>
+            <div class="row t-margin-8 u-cf">
+              <div class="col-lg-6">
+                <div class="row u-cf">
+                  <div class="col-lg-10 col-lg-offset-1">
+                    <div class="row t-margin-4 u-cf">
+                      <div class="col-lg-6">
+                        <input type="text" name="fname" value="Justin">
+                      </div>
+                      <div class="col-lg-6">
+                        <input type="text" name="lname" value="Hurt">
+                      </div>
+                    </div>
+                    <div class="row t-margin-4 u-cf">
+                      <div class="col-lg-12">
+                        <input type="text" name="title" value="Your Title">
+                      </div>
+                    </div>
+                    <div class="row t-margin-4 u-cf">
+                      <div class="col-lg-12">
+                        <input type="email" name="title" value="Email Address">
+                      </div>
+                    </div>
+                    <div class="row t-margin-4 u-cf">
+                      <div class="col-lg-12">
+                        <input type="text" name="company" value="Company Name">
+                      </div>
+                    </div>
+                    <div class="row u-cf">
+                      <div class="col-lg-12">
+                        <input type="text" name="vat-gst-id" value="VAT/GST ID (if applicable)">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="row u-cf">
+                  <div class="col-lg-10 col-lg-offset-1">
+                    <div class="row t-margin-4 u-cf">
+                      <div class="col-lg-12">
+                        <input type="text" name="address1" value="Address 1">
+                      </div>
+                    </div>
+                    <div class="row t-margin-4 u-cf">
+                      <div class="col-lg-12">
+                        <input type="text" name="address2" value="Address 2">
+                      </div>
+                    </div>
+                    <div class="row t-margin-4 u-cf">
+                      <div class="col-lg-12">
+                        <input type="text" name="city" value="City">
+                      </div>
+                    </div>
+                    <div class="row t-margin-4 u-cf">
+                      <div class="col-lg-6">
+                        <input type="text" name="state-province" value="State/Province">
+                      </div>
+                      <div class="col-lg-6">
+                        <input type="text" name="zip" value="Zip Code">
+                      </div>
+                    </div>
+                    <div class="row t-margin-4 u-cf">
+                      <div class="col-lg-12">
+                        <input type="text" name="country" value="Country">
+                      </div>
+                    </div>
+                    <div class="row u-cf">
+                      <div class="col-lg-12">
+                        <p>ConnectWise, Inc. is required to keep updated tax documentation on file for all customers. If your company will be submitting resale documentation, please select "Yes".</p>
+                      </div>
+                    </div>
+                    <div class="row u-cf">
+                      <div class="col-lg-12">
+                        <input class="l-left" type="radio" name="yes-resell-doc">
+                        <label class="l-left" for="yes-resell-doc">Yes</label>
+                        <input class="l-left" type="radio" name="no-resell-doc">
+                        <label class="l-left" for="no-resell-doc">No</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row u-cf">
+              <div class="col-lg-12 op_formNav">
+                <div class="row cf">
+                  <div class="col-lg-3">
+                    <a class="op_formNav--back" href="#">&lt;&lt; Go Back</a>
+                  </div>
+                  <div class="col-lg-5 col-lg-offset-4 u-cf">
+                    <button class="l-right op_btn--cta">Proceed to Billing Information</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="l-card l-card-5 op_submitCard">
+            <div class="row t-margin-8 u-cf">
+              <div class="col-lg-12 l-center op_submitCard--header">
+                <h5>Billing Information</h5>
+              </div>
+            </div>
+            <div class="row t-margin-6 u-cf">
+              <div class="col-lg-6">
+                <div class="row u-cf">
+                  <div class="col-lg-10 col-lg-offset-1">
+                    <div class="row t-margin-4 u-cf">
+                      <div class="col-lg-6">
+                        <input type="text" name="b-fname" value="Justin">
+                      </div>
+                      <div class="col-lg-6">
+                        <input type="text" name="b-lname" value="Hurt">
+                      </div>
+                    </div>
+                    <div class="row t-margin-4 u-cf">
+                      <div class="col-lg-12">
+                        <input type="text" name="ccnum" value="Credit Card Number" >
+                      </div>
+                    </div>
+                    <div class="row t-margin-4 u-cf">
+                      <div class="col-lg-12">
+                        <input type="text" name="ccnum" value="Credit Card Number" >
+                      </div>
+                    </div>
+                    <div class="row t-margin-4 u-cf">
+                      <div class="col-lg-12">
+                        <input type="text" name="ccnum" value="Credit Card Number" >
+                      </div>
+                    </div>
+                    <div class="row u-cf">
+                      <div class="col-lg-6">
+                        <input type="text" name="b-fname" value="Justin">
+                      </div>
+                      <div class="col-lg-6">
+                        <input type="text" name="b-lname" value="Hurt">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="row u-cf">
+                  <div class="col-lg-10 col-lg-offset-1">
+                    <div class="row t-margin-4 u-cf">
+                      <div class="col-lg-12">
+                        <input type="text" name="ccnum" value="Credit Card Number" >
+                      </div>
+                    </div>
+                    <div class="row t-margin-10 u-cf">
+                      <div class="col-lg-3">
+                        <input type="text" name="b-fname" value="Justin">
+                      </div>
+                      <div class="col-lg-3">
+                        <input type="text" name="b-fname" value="Justin">
+                      </div>
+                      <div class="col-lg-6">
+                        <input type="text" name="b-lname" value="Hurt">
+                      </div>
+                    </div>
+                    <div class="row t-margin-8 u-cf">
+                      <div class="col-lg-12">
+                        <input class="l-left" type="checkbox" name="tos">
+                        <label class="l-left" for="tos">Yes, I accept the terms of this agreement. Process my credit card for the amount shown above.</label>
+                      </div>
+                    </div>
+                    <div class="row u-cf">
+                      <button class="l-right op_btn--cta">Approve and Submit</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row u-cf">
+              <div class="col-lg-12 op_formNav">
+                <div class="row cf">
+                  <div class="col-lg-3">
+                    <a class="op_formNav--back" href="#">&lt;&lt; Go Back</a>
+                  </div>
+                  <div class="col-lg-5 col-lg-offset-4 u-cf">
+
+                  </div>
                 </div>
               </div>
             </div>
