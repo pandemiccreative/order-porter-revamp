@@ -1,7 +1,34 @@
 .op_formNav{
 
-  &--back{
+  &--backBtn{
     font-size: 2.8rem;
     line-height: 6.8rem;
+  }
+}
+
+@media (max-width: 500px){
+  .op_formNav{
+
+    &--back{
+      width:30%;
+      float:left;
+    }
+
+    &--backBtn{
+      font-size: 1.4rem;
+    }
+
+    &--fwd{
+      width:70%;
+      float: right;
+    }
+
+    &--fwdBtn{
+      font-size: 1.8rem;
+    }
+
+    &--proceed{
+      display: none;
+    }
   }
 }

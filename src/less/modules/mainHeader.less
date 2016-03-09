@@ -1,6 +1,21 @@
 .op_mainHeader{
+  margin-bottom: 8.1rem;
 
   &--powered{
-    margin-left: 260px;
+    text-align: right;
+  }
+}
+
+@media (max-width: 500px){
+  .op_mainHeader{
+    margin-bottom: 2.7rem;
+
+    &--pageTitle{
+      font-size: 3.6rem;
+    }
+
+    &--powered{
+      display: none;
+    }
   }
 }
