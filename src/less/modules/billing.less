@@ -18,7 +18,20 @@
   }
 }
 
-@media (max-width:500px){
+@media (max-width: @lg-mobile-break) and (min-width: @lg-mobile-break-min){
+  .op_billing{
+
+    &--tos{
+      margin-top: 0;
+    }
+
+    &:first-of-type{
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media (max-width:@mobile-break){
   .op_billing{
 
     &--tos{

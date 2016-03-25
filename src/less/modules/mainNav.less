@@ -1,5 +1,6 @@
 .op_mainNav{
   display: flex;
+  height: 100vh;
 
   &--navLink{
     display: block;
@@ -29,7 +30,19 @@
   }
 }
 
-@media (max-width: 500px){
+@media (max-width: @tab-break) and (min-width: @tab-break-min){
+  .op_mainNav{
+    display: none;
+  }
+}
+
+@media (max-width: @lg-mobile-break) and (min-width: @lg-mobile-break-min){
+  .op_mainNav{
+    display: none;
+  }
+}
+
+@media (max-width: @mobile-break){
   .op_mainNav{
     display: none;
   }

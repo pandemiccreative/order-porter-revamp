@@ -6,7 +6,22 @@
   }
 }
 
-@media (max-width: 500px){
+@media (max-width: @tab-break) and (min-width: @tab-break-min){
+  .op_formNav{
+
+    &--back{
+      width:30%;
+      float:left;
+    }
+
+    &--fwd{
+      width:70%;
+      float: right;
+    }
+  }
+}
+
+@media (max-width: @lg-mobile-break) and (min-width: @lg-mobile-break-min){
   .op_formNav{
 
     &--back{
@@ -15,7 +30,7 @@
     }
 
     &--backBtn{
-      font-size: 1.4rem;
+      font-size: 2.1rem;
     }
 
     &--fwd{
@@ -24,7 +39,36 @@
     }
 
     &--fwdBtn{
-      font-size: 1.8rem;
+      font-size: 2.1rem;
+      padding: 1.4rem 2.1rem;
+    }
+
+    &--proceed{
+      display: inline;
+    }
+  }
+}
+
+@media (max-width: @mobile-break){
+  .op_formNav{
+
+    &--back{
+      width:40%;
+      float:left;
+    }
+
+    &--backBtn{
+      font-size: 1.4rem;
+    }
+
+    &--fwd{
+      width:60%;
+      float: right;
+    }
+
+    &--fwdBtn{
+      font-size: 1.6rem;
+      padding: 1.2rem 1.6rem;
     }
 
     &--proceed{

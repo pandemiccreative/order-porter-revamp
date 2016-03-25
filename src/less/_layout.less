@@ -57,7 +57,43 @@
   top: 0;
 }
 
-@media (max-width:500px){
+@media (max-width: @tab-break) and (min-width: @tab-break-min){
+  #op_l-main{
+    padding:2rem;
+  }
+
+  #op_l-sidebar{
+    width: 90%;
+    position: absolute;
+    top: 0;
+    left:0;
+    z-index: 1000;
+
+    transition: all 0.5s ease-out;
+  }
+}
+
+@media (max-width: @lg-mobile-break) and (min-width: @lg-mobile-break-min){
+  #op_l-main{
+    padding:2rem;
+  }
+
+  #op_l-sidebar{
+    width: 90%;
+    position: absolute;
+    top: 0;
+    left:0;
+    z-index: 1000;
+
+    transition: all 0.5s ease-out;
+  }
+}
+
+@media (max-width:@mobile-break){
+  #op_l-main{
+    padding:2rem;
+  }
+
   #op_l-sidebar{
     width: 90%;
     position: absolute;

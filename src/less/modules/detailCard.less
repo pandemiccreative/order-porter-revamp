@@ -24,7 +24,37 @@
       background: @bg_Blue_med;
     }
   }
+
+  &--cta{
+    margin-bottom: 9rem;
+  }
 }
 
-@media (max-width:500px){
+@media (max-width: @tab-break) and (min-width: @tab-break-min){
+  .op_detailCard{
+    width: 100%;
+  }
+}
+
+@media (max-width: @lg-mobile-break) and (min-width: @lg-mobile-break-min){
+
+  .op_detailCard{
+
+    &--cta{
+      margin-top: 6rem;
+      margin-bottom: 6rem;
+    }
+  }
+
+}
+
+@media (max-width:@mobile-break){
+
+  .op_detailCard{
+
+    &--cta{
+      margin-bottom: 2rem;
+    }
+  }
+
 }

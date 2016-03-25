@@ -5,14 +5,79 @@
   }
 }
 
-@media (max-width: 500px){
+@media (max-width: @tab-break) and (min-width: @tab-break-min){
   .op_prospectCard{
     width:50%;
     font-size: 1.4rem;
+    float: left;
+
+    &.col-lg-12{
+      padding:20px;
+    }
 
     &--prepped{
-      font-size: 2.2rem;
-      margin-bottom: 1.2rem;
+      font-size: 1.9rem;
+      margin-bottom: .3rem;
+    }
+
+    &--name{
+      font-size: 1.6rem;
+    }
+
+    &--company{
+      font-size: 2rem;
+      margin-bottom: .7rem;
+    }
+
+    p{
+      line-height: 1.8rem;
+    }
+  }
+}
+
+@media (max-width: @lg-mobile-break) and (min-width: @lg-mobile-break-min){
+  .op_prospectCard{
+    width:50%;
+    font-size: 1.4rem;
+    float: left;
+
+    &.col-lg-12{
+      padding:20px;
+    }
+
+    &--prepped{
+      font-size: 1.9rem;
+      margin-bottom: .3rem;
+    }
+
+    &--name{
+      font-size: 1.6rem;
+    }
+
+    &--company{
+      font-size: 2rem;
+      margin-bottom: .7rem;
+    }
+
+    p{
+      line-height: 1.8rem;
+    }
+  }
+}
+
+@media (max-width: @mobile-break){
+  .op_prospectCard{
+    width:50%;
+    font-size: 1.4rem;
+    float: left;
+
+    &.col-lg-12{
+      padding:20px;
+    }
+
+    &--prepped{
+      font-size: 1.9rem;
+      margin-bottom: .3rem;
     }
 
     &--name{

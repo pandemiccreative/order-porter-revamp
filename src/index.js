@@ -178,21 +178,32 @@ let sidebarManip = {
     sidebar: document.getElementById('op_l-sidebar'),
     sidebarToggle: document.querySelector('.op_sidebar--toggle'),
     btnToggle: document.querySelector('.op_menuToggle'),
-    menuItems: document.querySelectorAll('.op_mainNav--navItem')
+    menuItems: document.querySelectorAll('.op_mainNav--navItem'),
+    mobMenuItems: document.querySelectorAll('.op_mobileNav--link')
   },
   init: function(){
     this.initListeners();
   },
   initListeners: function(){
     [...this.domCache.menuItems].map((item, i) => {
-      function callback(){
+      function callback(e){
+        e.preventDefault();
         if(!state.isAnimating) cardManip.jumpToCard(i);
       }
       item.addEventListener('click', callback);
     });
+    [...this.domCache.mobMenuItems].map((item, i) => {
+      item.addEventListener('click', (e) => {
+        e.preventDefault();
+        if(!state.isAnimating){
+          cardManip.jumpToCard(i);
+          this.hideSidebar();
+        }
+      });
+    });
 
-    this.domCache.sidebarToggle.addEventListener('click', (e) => {this.hideSidebar(e);});
-    this.domCache.btnToggle.addEventListener('click', (e) => {this.hideBtn(e);});
+    this.domCache.sidebarToggle.addEventListener('click', (e) => {e.preventDefault(); this.hideSidebar(e);});
+    this.domCache.btnToggle.addEventListener('click', (e) => {e.preventDefault(); this.hideBtn(e);});
   },
   setActiveItem: function(cardIndex){
     const menuItems = this.domCache.menuItems;
@@ -247,7 +258,8 @@ let cardManip = {
   },
   initListeners: function(){
     [...this.domCache.fwdBtns].map((btn, i) => {
-      btn.addEventListener('click', () => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
         this.moveFwd(this.domCache.cards, i + 1);
       });
     });
@@ -375,7 +387,7 @@ let cardManip = {
 
 let packageManip = {
   domCache: {
-    radioBtns: document.querySelectorAll('.op_qPackage--inRadio'),
+    radioBtns: document.querySelectorAll('.op_qPackage--header input[type=radio]'),
     packages: document.querySelectorAll('.op_qPackage')
   },
   init: function(){

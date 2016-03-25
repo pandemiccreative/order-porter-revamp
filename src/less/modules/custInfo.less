@@ -15,7 +15,16 @@
   }
 }
 
-@media (max-width: 500px){
+@media (max-width: @lg-mobile-break) and (min-width: @lg-mobile-break-min){
+  .op_cInfo{
+
+    &:first-of-type{
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media (max-width: @mobile-break){
   .op_cInfo{
 
     &:first-of-type{

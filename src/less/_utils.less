@@ -2,6 +2,12 @@
   clear: fix;
 }
 
+.clearhack{
+  &:nth-child(4n+4){
+    clear:both;
+  }
+}
+
 .def-font-sizes(@sizes; @index) when (@index > 0){
   .def-font-sizes(@font-sizes; (@index - 1));
 

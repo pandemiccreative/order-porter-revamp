@@ -28,4 +28,52 @@
       font-size: 1.4rem;
     }
   }
+
+  &--radioLabel{
+    margin-right: 10px;
+  }
+}
+
+@media (max-width: @lg-mobile-break) and (min-width: @lg-mobile-break-min){
+  .op_input{
+
+    &--text,
+    &--email,
+    &--password{
+      font-size: 2rem;
+      padding-top: 1.95rem
+    }
+
+    &--label{
+      font-size: 2rem;
+      top:2.2rem;
+
+      &.is-shrunk{
+        top: 1rem;
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+@media (max-width: @mobile-break){
+  .op_input{
+
+    &--text,
+    &--email,
+    &--password{
+      font-size: 2rem;
+      padding-top: 1.95rem
+    }
+
+    &--label{
+      font-size: 2rem;
+      top:2.2rem;
+
+      &.is-shrunk{
+        top: 1rem;
+        font-size: 1.2rem;
+      }
+    }
+  }
 }

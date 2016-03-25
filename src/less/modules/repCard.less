@@ -7,13 +7,102 @@
   }
 }
 
-@media (max-width: 500px){
+
+@media (max-width: @tab-break) and (min-width: @tab-break-min){
   .op_repCard{
+    padding:20px;
     width:50%;
     font-size: 1.4rem;
     line-height: 2.1rem;
     border-bottom:none;
     border-left: 3px solid darken(@bg_Blue_dark, 10%);
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    float:right;
+
+    p{
+      line-height: 1.8rem;
+    }
+
+    &--figure{
+      width: 45%;
+      float:left;
+    }
+
+    &--photo{
+      display: block;
+    }
+
+    &--meta.col-sm-12{
+      width:55%;
+      padding: 0;
+      float:left;
+    }
+
+    &--prepped{
+      font-size: 2.2rem;
+    }
+
+    &--repName{
+      font-size: 1.6rem;
+    }
+
+    &--company{
+      font-size: 1.8rem;
+    }
+  }
+}
+
+
+@media (max-width: @lg-mobile-break) and (min-width: @lg-mobile-break-min){
+  .op_repCard{
+    padding:20px;
+    width:50%;
+    font-size: 1.4rem;
+    line-height: 2.1rem;
+    border-bottom:none;
+    border-left: 3px solid darken(@bg_Blue_dark, 10%);
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    float:right;
+
+    p{
+      line-height: 1.8rem;
+    }
+
+    &--photo{
+      display: none;
+    }
+
+    &--meta.col-sm-12{
+      padding: 0;
+    }
+
+    &--prepped{
+      font-size: 2.2rem;
+    }
+
+    &--repName{
+      font-size: 1.6rem;
+    }
+
+    &--company{
+      font-size: 1.8rem;
+    }
+  }
+}
+
+@media (max-width: @mobile-break){
+  .op_repCard{
+    padding:20px;
+    width:50%;
+    font-size: 1.4rem;
+    line-height: 2.1rem;
+    border-bottom:none;
+    border-left: 3px solid darken(@bg_Blue_dark, 10%);
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    float:right;
 
     p{
       line-height: 1.8rem;

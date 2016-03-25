@@ -1,17 +1,17 @@
+'use strict';
+var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
-var config = {
-  entry: './src/index.jsx',
-  output: {
-    path: __dirname + '/dist',
-    filename: 'bundle.js'
-  },
+module.exports = {
+  entry: [
+    './src/index.js'
+  ],
   module: {
     loaders: [
       {
-        test: /\.jsx?$/,
+        test: /\.js$/,
         exclude: /node_modules/,
-        loader: 'react-hot!babel'
+        loader: 'babel'
       },
       {
         test: /\.(json(\?.*)?)$/,
@@ -24,25 +24,40 @@ var config = {
       {
         test: /\.(less(\?.*)?)$/,
         loader: ExtractTextPlugin.extract('css!postcss!less')
-      }
+      },
+      { test: /\.(png|jpg)$/, loader: 'url?limit=25000' },
+      { test: /\.(woff|woff2)$/,  loader: 'url-loader?limit=10000&mimetype=application/font-woff' },
+      { test: /\.ttf$/,    loader: 'file-loader' },
+      { test: /\.eot$/,    loader: 'file-loader' },
+      { test: /\.svg$/,    loader: 'file-loader' }
     ]
   },
   postcss: function() {
     return[
-      require('postcss-import')(),
-      require('postcss-bem')(),
-      require('postcss-nested')(),
+      // require('postcss-nested')(),
+      // require('postcss-import')(),
       require('postcss-clearfix')(),
-      require('css-mqpacker')(),
-      require('postcss-font-magician')(),
-      require('postcss-will-change')(),
-      require('autoprefixer')(),
-      require('cssnano')()
+      // require('css-mqpacker')(),
+      // require('postcss-font-magician')(),
+      // require('postcss-will-change')(),
+      // require('autoprefixer')(),
+      // require('cssnano')()
     ];
   },
   resolve: {
-    extensions: ['', '.js', '.jsx']
-  }
+    extensions: ['', '.js']
+  },
+  output: {
+    path: __dirname + '/dist',
+    publicPath: '/',
+    filename: 'bundle.js'
+  },
+  devServer: {
+    contentBase: './dist',
+    hot: true
+  },
+  plugins: [
+    new webpack.HotModuleReplacementPlugin(),
+    new ExtractTextPlugin('css/styles.css')
+  ]
 };
-
-module.exports = config;

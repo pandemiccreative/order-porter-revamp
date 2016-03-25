@@ -24,8 +24,23 @@
   }
 }
 
-@media (max-width:500px){
+@media (max-width: @lg-mobile-break) and (min-width: @lg-mobile-break-min){
   .op_btn{
+
+    font-size: 2.8rem;
+    padding: 1.8rem 2.8rem;
+
+    &--cta{
+      font-size: 2.4rem;
+    }
+  }
+}
+
+@media (max-width:@mobile-break){
+  .op_btn{
+
+    font-size: 2.1rem;
+    padding: 1.2rem 1.8rem;
 
     &--cta{
       font-size: 2.4rem;

@@ -5,12 +5,67 @@
   }
 }
 
-@media (max-width: 500px){
+@media (max-width: @tab-break) and (min-width: @tab-break-min){
   .op_quoteMeta{
-    padding: 15px;
+    padding: 15px 0 15px 0 !important;
 
     table{
       margin:auto;
+
+      tr{
+        td{
+          &:first-child,
+          &:last-child{
+            padding: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: @lg-mobile-break) and (min-width: @lg-mobile-break-min){
+  .op_quoteMeta{
+    padding: 15px 0 15px 0 !important;
+
+    p{
+      font-size: 1.4rem;
+    }
+
+    table{
+      margin:auto;
+
+      tr{
+        td{
+          &:first-child,
+          &:last-child{
+            padding: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: @mobile-break){
+  .op_quoteMeta{
+    padding: 15px 0 15px 0 !important;
+
+    p{
+      font-size: 1.4rem;
+    }
+
+    table{
+      margin:auto;
+
+      tr{
+        td{
+          &:first-child,
+          &:last-child{
+            padding: 0;
+          }
+        }
+      }
     }
   }
 }

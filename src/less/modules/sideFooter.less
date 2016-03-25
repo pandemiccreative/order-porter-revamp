@@ -3,8 +3,31 @@
   padding: 2.4rem 5.5rem 0 5.5rem;
 }
 
-@media (max-width: 500px){
+@media (max-width: @tab-break) and (min-width: @tab-break-min){
   .op_sideFooter{
+    padding:2.4rem 10rem 0 10rem;
+
+    &--icon{
+      width: 25%;
+      float:left;
+    }
+  }
+}
+
+@media (max-width: @lg-mobile-break) and (min-width: @lg-mobile-break-min){
+  .op_sideFooter{
+    padding:2.4rem 10rem 0 10rem;
+
+    &--icon{
+      width: 25%;
+      float:left;
+    }
+  }
+}
+
+@media (max-width: @mobile-break){
+  .op_sideFooter{
+    padding:2.4rem 2.5rem 0 2.5rem;
 
     &--icon{
       width: 25%;

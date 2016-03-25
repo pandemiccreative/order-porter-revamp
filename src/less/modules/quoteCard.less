@@ -1,0 +1,50 @@
+.op_quoteCard{
+
+  &--subTitle{
+    text-align: center;
+  }
+
+  &--subTotal{
+    text-align: right;
+  }
+}
+
+@media (max-width: @lg-mobile-break) and (min-width: @lg-mobile-break-min){
+
+  .op_quoteCard{
+
+    &--main{
+      overflow: auto;
+    }
+
+    &--subTitle{
+      text-align: left;
+    }
+
+    &--table{
+      padding:0 15px 0 0;
+      width: 900px;
+    }
+  }
+
+}
+
+@media (max-width: @mobile-break){
+
+  .op_quoteCard{
+
+    &--main{
+      overflow: auto;
+    }
+
+    &--subTitle{
+      text-align: left;
+    }
+
+    &--table{
+      padding:0 15px 0 0;
+      width: 900px;
+    }
+  }
+
+}

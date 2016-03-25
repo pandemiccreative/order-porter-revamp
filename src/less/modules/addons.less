@@ -1,17 +1,38 @@
 .op_addOns{
-  position: relative;
-  padding-top: 3.5rem;
+  margin-bottom: 3rem;
+  text-align: right;
+}
 
-  &--updateBtn{
-    position: absolute;
-    top:-3.5rem;
-    right:15px;
+@media (max-width: @lg-mobile-break) and (min-width: @lg-mobile-break-min){
+  .op_addOns{
+    overflow: auto;
+
+    &--updateBtn{
+      position: static;
+      top: auto;
+      right: auto;
+      margin-bottom: 2rem;
+    }
+
+    &--table{
+      width: 900px;
+    }
   }
+}
 
-  &--tableRow{
+@media (max-width: @mobile-break){
+  .op_addOns{
+    overflow: auto;
 
-    &:nth-child(even){
-      background: lighten(@bg_Blue_med, 10%);
+    &--updateBtn{
+      position: static;
+      top: auto;
+      right: auto;
+      margin-bottom: 2rem;
+    }
+
+    &--table{
+      width: 900px;
     }
   }
 }

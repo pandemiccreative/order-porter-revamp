@@ -6,9 +6,10 @@
   }
 }
 
-@media (max-width: 500px){
+@media (max-width: @tab-break) and (min-width: @tab-break-min){
   .op_mainHeader{
-    margin-bottom: 2.7rem;
+    margin-bottom: 2rem;
+
 
     &--pageTitle{
       font-size: 3.6rem;
@@ -16,6 +17,48 @@
 
     &--powered{
       display: none;
+    }
+
+    h1{
+      font-size: 4rem;
+    }
+  }
+}
+
+@media (max-width: @lg-mobile-break) and (min-width: @lg-mobile-break-min){
+  .op_mainHeader{
+    margin-bottom: 2rem;
+
+
+    &--pageTitle{
+      font-size: 3.6rem;
+    }
+
+    &--powered{
+      display: none;
+    }
+
+    h1{
+      font-size: 4rem;
+    }
+  }
+}
+
+@media (max-width: @mobile-break){
+  .op_mainHeader{
+    margin-bottom: 2rem;
+
+
+    &--pageTitle{
+      font-size: 3.6rem;
+    }
+
+    &--powered{
+      display: none;
+    }
+
+    h1{
+      font-size: 4rem;
     }
   }
 }

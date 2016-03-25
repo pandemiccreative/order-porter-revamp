@@ -2,7 +2,21 @@
 
 }
 
-@media (max-width:500px){
+@media (max-width: @tab-break) and (min-width: @tab-break-min){
+  .op_logo{
+    margin-bottom: 1.8rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: @lg-mobile-break) and (min-width: @lg-mobile-break-min){
+  .op_logo{
+    margin-bottom: 1.8rem;
+    text-align: center;
+  }
+}
+
+@media (max-width:@mobile-break){
   .op_logo{
     margin-bottom: 1.8rem;
     text-align: center;
