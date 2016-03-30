@@ -17,14 +17,37 @@ let state = {
   isAnimating: false
 };
 
+let cookieManip = {
+  createCookie: function(cname, cvalue, expd){
+    let expires = '';
+    if(expd){
+      let d = new Date();
+      d.setTime(d.getTime() + (expd*24*60*60*1000));
+      expires = 'expires='+d.toUTCString();
+    }
+    document.cookie = cname + '=' + cvalue + ';' + expires + ';' + ' path=/';
+  },
+  getCookie: function(cname){
+    const name = cname + '=';
+    const ca = document.cookie.split(';');
+    let cdata = '';
+    ca.map((c) => {
+      while(c.charAt(0) === ' ') c = c.substring(1);
+      if(c.indexOf(name) === 0){
+        cdata = c.substring(name.length, c.length);
+      }
+    });
+    return cdata;
+  }
+};
+
 let formManip = {
   domCache: {
     inputContainers: document.querySelectorAll('.op_input--container'),
     sameCInfoCheck: document.querySelector('.same-as-cInfo'),
-    sameSInfoCheck: document.querySelector('.same-as-shipping'),
     cInfoCard: document.querySelector('.op_cInfo'),
-    sInfoCard: document.querySelector('.op_shipCard'),
-    bInfoCard: document.querySelector('.op_billing')
+    bInfoCard: document.querySelector('.op_billing'),
+    updateBtn: document.querySelector('.op_addons--updateBtn')
   },
   init: function(){
     this.checkVals();
@@ -82,8 +105,8 @@ let formManip = {
     this.domCache.sameCInfoCheck.addEventListener('click', (e) => {
       this.copyCInfo(e);
     });
-    this.domCache.sameSInfoCheck.addEventListener('click', (e) => {
-      this.copySInfo(e);
+    this.domCache.updateBtn.addEventListener('click', () => {
+      cookieManip.createCookie('op_updating', 'true');
     });
   },
   shrink: function(e){
@@ -97,41 +120,33 @@ let formManip = {
     const parentCard = e.target.parentNode.parentNode.parentNode.parentNode.parentNode;
 
     const inputs = {
-      cName: parentCard.querySelector('.op_shipCard--sName'),
-      add1: parentCard.querySelector('.op_shipCard--sAdd1'),
-      add2: parentCard.querySelector('.op_shipCard--sAdd2'),
-      city: parentCard.querySelector('.op_shipCard--sCity'),
-      state: parentCard.querySelector('.op_shipCard--sState'),
-      zip: parentCard.querySelector('.op_shipCard--sZip'),
-      country: parentCard.querySelector('.op_shipCard--sCountry')
+      add1: parentCard.querySelector('.op_billing--add1'),
+      add2: parentCard.querySelector('.op_billing--add2'),
+      city: parentCard.querySelector('.op_billing--city'),
+      state: parentCard.querySelector('.op_billing--state'),
+      zip: parentCard.querySelector('.op_billing--zip')
     };
 
     const cInputs = {
-      cName: this.domCache.cInfoCard.querySelector('.op_cInfo--company'),
       add1: this.domCache.cInfoCard.querySelector('.op_cInfo--add1'),
       add2: this.domCache.cInfoCard.querySelector('.op_cInfo--add2'),
       city: this.domCache.cInfoCard.querySelector('.op_cInfo--city'),
       state: this.domCache.cInfoCard.querySelector('.op_cInfo--state'),
-      zip: this.domCache.cInfoCard.querySelector('.op_cInfo--zip'),
-      country: this.domCache.cInfoCard.querySelector('.op_cInfo--country')
+      zip: this.domCache.cInfoCard.querySelector('.op_cInfo--zip')
     };
 
     if(e.target.checked){
-      inputs.cName.value = cInputs.cName.value;
       inputs.add1.value = cInputs.add1.value;
       inputs.add2.value = cInputs.add2.value;
       inputs.city.value = cInputs.city.value;
       inputs.state.value = cInputs.state.value;
       inputs.zip.value = cInputs.zip.value;
-      inputs.country.value = cInputs.country.value;
     } else {
-      if(inputs.cName.value === cInputs.cName.value) inputs.cName.value = '';
       if(inputs.add1.value === cInputs.add1.value) inputs.add1.value = '';
       if(inputs.add2.value === cInputs.add2.value) inputs.add2.value = '';
       if(inputs.city.value === cInputs.city.value) inputs.city.value = '';
       if(inputs.state.value === cInputs.state.value) inputs.state.value = '';
       if(inputs.zip.value === cInputs.zip.value) inputs.zip.value = '';
-      if(inputs.country.value === cInputs.country.value) inputs.country.value = '';
     }
 
     this.checkVals();
@@ -236,7 +251,8 @@ let cardManip = {
     cardHolder: document.querySelector('.l-cardRow'),
     cards: document.querySelectorAll('.l-card'),
     fwdBtns: document.querySelectorAll('.op_btn--fwd'),
-    backBtns: document.querySelectorAll('.op_btn--back')
+    backBtns: document.querySelectorAll('.op_btn--back'),
+    errorMsg: document.querySelector('.op_error--msg')
   },
   init: function(){
     this.cacheInfo(this.domCache.cards);
@@ -253,8 +269,19 @@ let cardManip = {
   },
   initCards: function(cards){
     this.setWidths(cards);
-    this.setCurrentCard(cards, 0);
-    this.setNextCard(cards, 1);
+    if(this.domCache.errorMsg){
+      this.setCurrentCard(cards, 3);
+      this.setNextCard(cards, 4);
+      this.setPrevCard(cards, 2);
+    } else if(cookieManip.getCookie('op_updating')){
+      this.setCurrentCard(cards, 2);
+      this.setNextCard(cards, 3);
+      this.setPrevCard(cards, 1);
+      cookieManip.createCookie('op_updating', 'false', '-999');
+    } else{
+      this.setCurrentCard(cards, 0);
+      this.setNextCard(cards, 1);
+    }
   },
   initListeners: function(){
     [...this.domCache.fwdBtns].map((btn, i) => {
@@ -276,11 +303,8 @@ let cardManip = {
   },
   scrollTop: function(el, to, dur){
     if(dur <= 0) return;
-    console.log(el, to, dur);
     const diff = to - el.scrollTop;
-    console.log(diff);
     const perTick = diff / dur * 10;
-    console.log(perTick);
 
     setTimeout(() => {
       el.scrollTop = el.scrollTop + perTick;
@@ -374,7 +398,6 @@ let cardManip = {
     this.scrollTop(document.body, 0, 250);
   },
   moveBack: function(cards, prevIndex){
-    console.log('test')
     this.setCurrentCard(cards, prevIndex);
     this.setNextCard(cards, prevIndex + 1);
     if(cards[prevIndex - 1]) this.setPrevCard(cards, prevIndex - 1);

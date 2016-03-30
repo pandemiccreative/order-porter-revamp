@@ -42,7 +42,7 @@ module.exports = {
       // require('css-mqpacker')(),
       // require('postcss-font-magician')(),
       // require('postcss-will-change')(),
-      // require('autoprefixer')(),
+      require('autoprefixer')()
       // require('cssnano')()
     ];
   },
