@@ -1,4 +1,5 @@
 'use strict';
+var path = require('path');
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
@@ -9,9 +10,15 @@ module.exports = {
   module: {
     loaders: [
       {
+        loader: 'babel-loader',
+        include: [
+          path.resolve(__dirname, 'src')
+        ],
         test: /\.js$/,
-        exclude: /node_modules/,
-        loader: 'babel'
+        query: {
+          plugins: ['transform-runtime'],
+          presets: ['es2015']
+        }
       },
       {
         test: /\.(json(\?.*)?)$/,
